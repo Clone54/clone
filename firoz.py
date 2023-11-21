@@ -630,7 +630,7 @@ with tred(max_workers=30) as pool:
             pool.submit(crackfree, idf, pwv)
 
 print('\n\033[1;37m===================================')
-print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETE TIME :\033[1;92m' + time.strftime("%H:%M") + " " + tag)
+print('\033[97;1m[\033[92;1m+\033[97;1m] CLONING COMPLETE TIME :\033[1;92m' + time.strftime("%H:%M"))
 print('\033[97;1m[\033;92m•\033[97;1m] OK :\033[0;92m %s ' % (ok))
 print('\033[97;1m[\033[92;1m+\033[97;1m] CP :\033[0;93m %s ' % (cp))
 print('\n\033[1;37m===================================')
