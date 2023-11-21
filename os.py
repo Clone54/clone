@@ -425,7 +425,7 @@ def passwrd():
 	print(f'\033[97;1m[\033[92;1m+\033[97;1m] \033[1;94mStarting Time \033[1;96m:\033[1;92m {current_time}')
 	print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mCloning Speed Ultra Super Fast")
 	print("\033[97;1m[\033[92;1m+\033[97;1m] \033[1;96mTURN ON/OFF FLIGHT MODE IN EVERY 5 MIN")
-	COBRAj(f'\033[0;97m===============================================')
+	firozj(f'\033[0;97m===============================================')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
