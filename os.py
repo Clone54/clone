@@ -167,9 +167,9 @@ attemps = 0
 os.system('clear')
 #------------------[ MAIN ]-----------------#
 
-os.system('espeak -a 300 " Your,   Real,  Name,"')
+os.system('espeak -a 300 " Your Real Name"')
 NameX =input('\033[1;97m[\033[1;92m•\033[1;97m]\033[1;92m WHAT IS YOUR NAME \033[1;91m:\33[1;32m')
-os.system('espeak -a 300 " Welcome,   to,  cobra,  Tools"')
+os.system('espeak -a 300 " Welcome to cobra Tools"')
 os.system('xdg-open https://www.facebook.com/firoz5678')
 def banner():
 	os.system("clear")
@@ -539,12 +539,12 @@ def Subscraption():
 		print("\033[97;1m[\033[92;1m•\033[97;1m]\x1b[38;5;208m COBRA-BOSS, TOOLS Daily Update")
 		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 7 DAYS 300 Tk")
 		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m 15 DAYS 500 Tk")
-		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Key  :\033[0;93m "+ak+FIROZ+key1)
+		print("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Key  :\033[0;93m "+ak+firoz+key1)
 		name = input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Your Name : ")
 		input("\033[97;1m[\033[92;1m•\033[97;1m]\33[0;92m Press Enter To Send Key")
 		time.sleep(1.5)
 		tks = 'Assalamu%20Alaikum-!💚,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+firoz+''+key1
-		os.system('am start https://wa.me/+8801871528249?text=' + tks)
+		os.system('am start https://wa.me/+8801605092962?text=' + tks)
 		Subscraption() 
 Subscraption() 
 login()
