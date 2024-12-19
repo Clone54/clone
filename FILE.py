@@ -1,4 +1,8 @@
 import os, platform, time, sys
+import ctypes
+
+# Load the shared object file
+lib = ctypes.CDLL('./FILE64.so')
 #os.system('xdg-open https://chat.whatsapp.com/LVHHgKJW6EQHb20n6R4Du8')
 try:
  import requests
