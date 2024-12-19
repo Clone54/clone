@@ -1,3 +1,4 @@
+import os
 os.system("pkg install espeak")
 #-----------------[ Tutul-King ]-------------------#
  
